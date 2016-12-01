@@ -81,7 +81,7 @@ var CALENDAR = function() {
             calendar[i] = "<tr><td>" + calendar[i].join("</td><td>") + "</td></tr>";
         }
 
-        calendar = $("<table>" + calendar.join("") + "</table").addClass("curr");
+        calendar = $("<table><tr><td class=\"nil\">sun</td><td class=\"nil\">mon</td><td class=\"nil\">tue</td><td class=\"nil\">wed</td><td class=\"nil\">thu</td><td class=\"nil\">fri</td><td class=\"nil\">sat</td></tr>" + calendar.join("") + "</table").addClass("curr");
 
         $("td:empty", calendar).addClass("nil");
         if (month === new Date().getMonth()) {
